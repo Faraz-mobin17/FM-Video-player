@@ -7,8 +7,7 @@ import { demoProfilePicture } from "../utils/constants";
 const ChannelCard = ({ channelDetail, marginTop }) => (
   <Box
     sx={{
-      boxShadow: "none",
-      borderRadius: "20px",
+      borderRadius: "10px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
