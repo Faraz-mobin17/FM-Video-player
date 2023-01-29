@@ -37,10 +37,10 @@ a {
   color: white !important;
 }
 .category-btn .active:not(:hover) {
-  background: #6633cc;
+  background: #ff0066;
 }
 .category-btn:hover {
-  background-color: #6633cc !important;
+  background-color: #ff0066 !important;
   color: white !important;
 }
 
