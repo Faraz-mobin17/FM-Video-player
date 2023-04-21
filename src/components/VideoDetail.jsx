@@ -61,10 +61,18 @@ const VideoDetail = () => {
                 </Typography>
               </Link>
               <Stack direction="row" gap="20px" alignItems="center">
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                <Typography
+                  variant="body1"
+                  sx={{ opacity: 1 }}
+                  style={{ fontWeight: "bold" }}
+                >
                   {parseInt(viewCount).toLocaleString()} views
                 </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                <Typography
+                  variant="body1"
+                  sx={{ opacity: 1 }}
+                  style={{ fontWeight: "bold" }}
+                >
                   {parseInt(likeCount).toLocaleString()} likes
                 </Typography>
               </Stack>

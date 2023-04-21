@@ -9,12 +9,13 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
       height: { sx: "auto", md: "95%" },
       flexDirection: "column",
     }}
+    style={{ backgroundColor: "black", paddingLeft: "0px" }}
   >
     {categories.map((category) => (
       <button
         className="category-btn"
         style={{
-          background: category.name === selectedCategory && "#fc1503",
+          background: category.name === selectedCategory && "#425266",
           color: "#fff",
         }}
         key={category.name}
@@ -22,14 +23,20 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
       >
         <span
           style={{
-            color: category.name === selectedCategory ? "#fff" : "red",
+            color: category.name === selectedCategory ? "#fff" : "#6633CC",
             marginRight: "15px",
+            fontFamily: "font-family: 'Open Sans', sans-serif",
           }}
         >
           {category.icon}
         </span>
         <span
-          style={{ opacity: category.name === selectedCategory ? "1" : "0.8" }}
+          style={{
+            fontWeight: "normal",
+            fontSize: "12px",
+            fontFamily: "font-family: 'Open Sans', sans-serif",
+            color: "#fff",
+          }}
         >
           {category.name}
         </span>
