@@ -8,6 +8,9 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
       overflowY: "auto",
       height: { sx: "auto", md: "95%" },
       flexDirection: "column",
+      background: "#000",
+      width: { sx: "auto", md: "250px" },
+      padding: "10px",
     }}
     style={{ backgroundColor: "black", paddingLeft: "0px" }}
   >
@@ -23,7 +26,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
       >
         <span
           style={{
-            color: category.name === selectedCategory ? "#fff" : "#6633CC",
+            color: category.name === selectedCategory ? "#fff" : "red",
             marginRight: "15px",
             fontFamily: "font-family: 'Open Sans', sans-serif",
           }}
@@ -31,12 +34,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
           {category.icon}
         </span>
         <span
-          style={{
-            fontWeight: "normal",
-            fontSize: "12px",
-            fontFamily: "font-family: 'Open Sans', sans-serif",
-            color: "#fff",
-          }}
+          style={{ opacity: category.name === selectedCategory ? "1" : "0.8" }}
         >
           {category.name}
         </span>

@@ -11,15 +11,13 @@ const Navbar = () => (
       position: "sticky",
       background: "#000",
       top: 0,
-      justifyContent: "center",
+      justifyContent: "space-around",
     }}
   >
     <Link to="/" style={{ display: "flex", alignItems: "center" }}>
       <img src={logo} alt="logo" height={45} />
     </Link>
-    <h1 style={{ color: "#fff" }}>
-      <span style={{ color: "purple" }}>FM</span> Player
-    </h1>
+    <h1 style={{ color: "#fff" }}>FM Player</h1>
     <SearchBar />
   </Stack>
 );

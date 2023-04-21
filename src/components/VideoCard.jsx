@@ -19,9 +19,10 @@ const VideoCard = ({
 }) => (
   <Card
     sx={{
-      width: { xs: "100%", sm: "358px", md: "300px" },
+      width: { xs: "100%", sm: "358px", md: "320px" },
       borderRadius: "10px",
-      fontFamily: "'Open Sans', sans-serif",
+      outline: "none",
+      border: "none",
     }}
     className="zoom"
   >
@@ -32,7 +33,7 @@ const VideoCard = ({
         sx={{ width: { xs: "100%", sm: "358px" }, height: 180 }}
       />
     </Link>
-    <CardContent sx={{ backgroundColor: "#0E1924", height: "106px" }}>
+    <CardContent sx={{ backgroundColor: "#111", height: "106px" }}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <Typography variant="subtitle2" fontWeight="normal" color="#FFF">
           {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
@@ -45,17 +46,18 @@ const VideoCard = ({
       >
         <Typography
           variant="subtitle2"
-          color="darkgray"
-          style={{ fontWeight: "bold" }}
+          color="#fff"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: "10px",
+            fontSize: "14px",
+          }}
         >
           {snippet?.channelTitle || demoChannelTitle}
           <CheckCircleIcon
-            sx={{
-              fontSize: "12px",
-              color: "gray",
-              ml: "5px",
-              fontWeight: "bold",
-            }}
+            sx={{ fontSize: "18px", color: "#FF0066", ml: "5px" }}
           />
         </Typography>
       </Link>
