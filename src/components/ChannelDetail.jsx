@@ -33,7 +33,7 @@ const ChannelDetail = () => {
         <div
           style={{
             height: "300px",
-            background: "#0E1924",
+            background: "#00ADB5",
             zIndex: 10,
             borderRadius: "10px",
           }}

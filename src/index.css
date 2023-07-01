@@ -7,7 +7,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: #0e1924 !important;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Belanosima", sans-serif;
 }
 
 a {
@@ -29,13 +29,7 @@ a {
 ::-webkit-scrollbar-track {
   background-color: transparent;
 }
-.zoom {
-  transform: scale(1);
-}
-.zoom:hover {
-  transform: scale(1.1);
-  transition: all 0.2s ease;
-}
+
 .category-btn {
   color: white !important;
 }
@@ -56,25 +50,19 @@ a {
   width: 100% !important;
 }
 ::placeholder {
-  font-size: 18px;
+  font-size: 14px;
 }
 .search-bar {
-  border: none;
-  border-bottom: 2px solid #ccc;
-  border-bottom-left-radius: -5px;
-  border-bottom-right-radius: -5px;
+  border: 1px solid transparent;
   padding: 10px;
   outline: none;
   width: 350px;
   background: transparent !important;
-  color: white;
+  color: #0e1924;
   transition: all 0.5s ease-in-out;
 }
-.search-bar:focus {
-  border-bottom-color: #ff0066;
-}
+
 .category-btn {
-  font-weight: bold !important;
   text-transform: capitalize;
   display: flex;
   align-items: center;
@@ -83,7 +71,7 @@ a {
   background: transparent;
   outline: none;
   border: none;
-
+  letter-spacing: 1.5px;
   padding: 7px 15px;
   margin: 10px 0px;
   border-radius: 20px;
@@ -91,10 +79,11 @@ a {
 }
 .zoom {
   transition: transform 0.5s;
+  perspective: 100px;
 }
 .zoom:hover {
-  transition: transform 0.3s ease-in-out;
-  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  transform: translateY(-8px);
 }
 @media screen and (max-width: 900px) {
   .category-btn {
@@ -119,4 +108,10 @@ a {
   .search-bar {
     width: 200px;
   }
+}
+.sc {
+  transition: 0.3s ease;
+}
+.sc:hover {
+  transform: scale(1.1);
 }

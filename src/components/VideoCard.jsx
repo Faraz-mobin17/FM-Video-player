@@ -25,10 +25,9 @@ const VideoCard = ({
 }) => (
   <Card
     sx={{
-      width: { xs: "100%", sm: "358px", md: "320px" },
-      borderRadius: "10px",
-      outline: "none",
-      border: "none",
+      width: { xs: "100%", sm: "258px", md: "358px" },
+      borderRadius: "6px",
+      border: "2px solid transparent",
     }}
     className="zoom"
   >
@@ -37,11 +36,18 @@ const VideoCard = ({
         image={snippet?.thumbnails?.high?.url || demoThumbnailUrl}
         alt={snippet?.title}
         sx={{ width: { xs: "100%", sm: "358px" }, height: 180 }}
+        className="sc"
       />
     </Link>
-    <CardContent sx={{ backgroundColor: "#111", height: "106px" }}>
+    <CardContent sx={{ backgroundColor: "#fff", height: "auto" }}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
-        <Typography variant="subtitle2" fontWeight="normal" color="#FFF">
+        <Typography
+          fontWeight="normal"
+          color="#0E1924"
+          style={{
+            fontFamily: "Belanosima",
+          }}
+        >
           {snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
         </Typography>
       </Link>
@@ -51,22 +57,25 @@ const VideoCard = ({
         }
       >
         <Typography
-          variant="subtitle2"
-          color="#fff"
+          color="#0E1924"
           style={{
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
+            justifyContent: "flex-start",
             marginTop: "10px",
             fontSize: "12px",
+            fontFamily: "Belanosima",
           }}
         >
           {snippet?.channelTitle || demoChannelTitle}
           <CheckCircleIcon
-            sx={{ fontSize: "18px", color: "#FF0066", ml: "5px" }}
+            sx={{ fontSize: "18px", color: "#00ADB5", ml: "5px" }}
           />
-          <Button variant="contained">Add to Playlist</Button>
         </Typography>
+        <Button color="error" style={{ marginTop: "20px" }}>
+          Add to Playlist
+        </Button>
       </Link>
     </CardContent>
   </Card>

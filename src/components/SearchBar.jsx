@@ -23,9 +23,7 @@ const SearchBar = () => {
         boxShadow: "none",
         mr: { sm: 5 },
       }}
-      style={{
-        background: "transparent",
-      }}
+      style={{ marginLeft: "20px" }}
     >
       <input
         className="search-bar"
@@ -35,7 +33,15 @@ const SearchBar = () => {
           setSearchText(e.target.value);
         }}
       />
-      <IconButton type="submit" sx={{ p: "10px", color: "#FF0066" }}>
+      <IconButton
+        type="submit"
+        sx={{
+          p: "10px",
+          color: "#FF0066",
+          backgroundColor: "#eee",
+          border: "1px solid transparent",
+        }}
+      >
         <Search />
       </IconButton>
     </Paper>

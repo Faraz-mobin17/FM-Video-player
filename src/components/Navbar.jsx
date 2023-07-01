@@ -6,18 +6,22 @@ const Navbar = () => (
   <Stack
     direction="row"
     alignItems="center"
-    p={2}
     sx={{
       position: "sticky",
-      background: "#000",
+      background: "#0E1924",
       top: 0,
-      justifyContent: "space-around",
+      justifyContent: "center",
+      borderBottom: "1px solid #2e2e2e",
+      boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
     }}
   >
-    <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+    <Link
+      to="/"
+      style={{ display: "flex", alignItems: "center", marginRight: "20px" }}
+    >
       <img src={logo} alt="logo" height={45} />
     </Link>
-    <h1 style={{ color: "#fff" }}>FM Player</h1>
+    <h2 style={{ color: "#fff" }}>FM Player</h2>
     <SearchBar />
   </Stack>
 );
