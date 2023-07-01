@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Typography, Card, CardContent, CardMedia } from "@mui/material";
+import {
+  Typography,
+  Card,
+  CardContent,
+  CardMedia,
+  Button,
+} from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 import {
@@ -49,16 +55,17 @@ const VideoCard = ({
           color="#fff"
           style={{
             display: "flex",
-            flexDirection: "column",
+            flexDirection: "row",
             alignItems: "center",
             marginTop: "10px",
-            fontSize: "14px",
+            fontSize: "12px",
           }}
         >
           {snippet?.channelTitle || demoChannelTitle}
           <CheckCircleIcon
             sx={{ fontSize: "18px", color: "#FF0066", ml: "5px" }}
           />
+          <Button variant="contained">Add to Playlist</Button>
         </Typography>
       </Link>
     </CardContent>

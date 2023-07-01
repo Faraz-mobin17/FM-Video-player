@@ -1,5 +1,10 @@
-import { Stack } from "@mui/material";
-import { categories } from "../utils/constants";
+import { Stack, Button } from "@mui/material";
+import { categories, playlist } from "../utils/constants";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const selectedCategory = "New";
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
   <Stack
@@ -14,6 +19,18 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
     }}
     style={{ backgroundColor: "black", paddingLeft: "0px" }}
   >
+    <Accordion style={{ background: "black", color: "red", fontSize: "18px" }}>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel1a-content"
+        id="panel1a-header"
+      >
+        <Typography>Java PlayList</Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>Java Swing</Typography>
+      </AccordionDetails>
+    </Accordion>
     {categories.map((category) => (
       <button
         className="category-btn"
